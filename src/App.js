@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+//ReactBootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+//ROUTES
+import {BrowserRouter} from 'react-router-dom';
+import RoutesApp from './routes';
+
+//ESTILIZAÇÃO E VALIDAÇÃO
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+export default function App(){
+ return (
+  
+   <BrowserRouter>
+   <ToastContainer autoClose={3000}/>
+    <RoutesApp/>
+   </BrowserRouter>
+   
   );
 }
-
-export default App;
